@@ -8,10 +8,6 @@ from drf_yasg import openapi
 from .models import Employee, Client, Order, OrderItem
 from .serializers import EmployeeStatisticsSerializer, ClientStatisticsSerializer
 
-
-# =====================================================
-# 🔹 1. Xodim bo‘yicha individual statistika
-# =====================================================
 class EmployeeStatisticsDetailView(APIView):
     """
     GET /statistics/employee/{id}/?month=1&year=2023
@@ -63,10 +59,6 @@ class EmployeeStatisticsDetailView(APIView):
 
         return Response(data, status=200)
 
-
-# =====================================================
-# 🔹 2. Barcha xodimlar statistikasi
-# =====================================================
 class AllEmployeesStatisticsView(APIView):
     """
     GET /employee/statistics/?month=1&year=2023
@@ -121,10 +113,6 @@ class AllEmployeesStatisticsView(APIView):
 
         return Response(result, status=200)
 
-
-# =====================================================
-# 🔹 3. Mijoz bo‘yicha individual statistika
-# =====================================================
 class ClientStatisticsDetailView(APIView):
     """
     GET /statistics/client/{id}/?month=1&year=2023
